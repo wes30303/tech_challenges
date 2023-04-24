@@ -7,15 +7,8 @@
 
 require "pry"
 def sum_even_numbers(numbers)
-  total = 0
-  numbers.each do |number|
-    if number.even?
-      total = number + total
-    end
-  end
-  return total
+  numbers.select(&:even?).sum
 end
-
 
 set_1 = [1, 2, 3, 4, 5, 6]
 set_2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
