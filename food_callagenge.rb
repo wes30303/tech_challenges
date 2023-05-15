@@ -18,3 +18,14 @@ def find_match(receipts)
 end
 
 p find_match(receipts)
+
+
+
+def commonElements(array1, array2)
+  array1.select { |element| array2.include?(element) }
+end
+
+array1 = [1, 2, 3, 4, 5]
+array2 = [4, 5, 6, 7, 8]
+common_elements = commonElements(array1, array2)
+puts common_elements.inspect
